@@ -1,0 +1,68 @@
+.first_nav{
+	background-color:white;
+	margin: 5px;
+}
+
+.nav_right{
+	position: relative;
+	padding: 20px;
+	float: right;
+	bottom: 80px;
+}
+a:link{
+	text-decoration: none;
+}
+a:visited{
+	color:green;
+}
+
+ul{
+	text-align: center;
+}
+
+li{
+	display:inline-block;
+	font-size: 20px;
+}
+ul li {
+	list-style-type: none;
+	margin-left:20px;
+	
+}
+
+.nav_out_line{
+	 border-bottom: 1px solid #bcbcbc;
+	 height: 10px;
+}
+
+.main_1{
+	margin:1px;
+	height:400px;
+	background-color: white;
+	background-image:url("images/coding.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	border-bottom: 1px solid #bcbcbc;
+	
+}
+.main_text{
+	text-align: center;
+	font-size: 100px;
+	
+}
+.span_test{
+	text-align: center;
+}
+
+.footer_{
+	height:40px;
+	text-align: center;
+	font-style:inherit;
+	font-size:50px;
+	color: gray;
+	position: relative;
+	top: 400px;
+}
+.footer_span{
+	
+}
