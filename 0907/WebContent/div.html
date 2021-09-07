@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+	
+	table {
+		border-collapse: collapse;
+		border: 1px solid;
+		width:400px;
+	}
+	td {
+		border: 1px solid;
+		text-align: center;
+	}
+	
+</style>
+
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+</head>
+<body>
+
+	<div>div는 블록레벨이다 하나의 영역을 구분할 때 사용된다.</div>
+		
+	<div>
+		<header>
+			<h1>테이블 연습</h1>
+		</header>
+		
+		<article> <!-- 내용추가 -->
+			<table>
+				<caption> '표'를 만들땐 caption을 넣어서 css에서
+				           숨겨주는게 좋습니다. </caption>
+				<!-- 각 컬럼에 너비를 지정 넣을때 사용했음. -->
+				
+				<colgroup>
+					<col width="60px"/> <!-- 첫번째 열 -->
+					<col width="100px"/> <!-- 두번째 열 -->
+					<col width="*"/> <!-- 세번째 열 (* 기존 셀의 너비 )-->
+					<col width="80px"/> <!-- 네번째 열 -->
+				</colgroup>
+				<!--  -->
+				<tbody>
+				
+					<tr>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+					</tr>
+					
+					<tr>
+						<td>5</td>
+						<td>6</td>
+						<td>7</td>
+						<td>8</td>
+					</tr>
+					
+					
+				</tbody>
+			</table>
+		</article>
+	</div>
+	
+</body>
+</html>

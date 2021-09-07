@@ -1,0 +1,72 @@
+<!DOCTYPE html> <!-- HTML5 기반 DTD 파일 -->
+<html>
+<head>
+	<!-- HTML4 기반 CSS 적용법 -->
+	<style type="text/css">
+	/* 현재 파일안에 태그들 중 table 이라는 태그를 만나면 수행할 내용 */
+	table{
+		width: 500px;
+		text-align: center;
+	 /*	border-spacing: 0px;  셀과 셀 간의 간격 */
+	 	/* 셀과 셀 간의 간격 '단선을 줄때 좋다' */
+		border-collapse: collapse; 
+		
+	}
+	td{
+		border: 1px solid;
+	}
+	
+	</style>
+	
+	
+	<link rel="stylesheet" href="main.css">
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+<body>
+	<pre>
+		pre태그는 p태그와 같이
+		문단태그다.
+		pre태그와 p태그의 다른점은 pre태그 내부의
+		내용을 그대로 표현한다
+	</pre>
+	
+	<p>
+		사용한 태그는 p태그입니다 
+		인라인레벨로 인식된다!
+		줄바꿈을 하고 싶다면 br 태그를 사용한다
+	</p>
+	
+	<table>
+		<tbody>
+			<tr>
+				<td colspan="2">1</td>
+				<!-- 2개의 열을 합친 후 3개의 행을 합친다 -->
+				<td colspan="2" rowspan="3">3</td>
+				
+			</tr>
+			
+			<tr>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			
+			<tr>
+				<td colspan="2" rowspan="2">9</td>
+				<!-- 10  -->
+			</tr>
+			
+			<tr>
+				
+				<!-- 13 15 .. -->
+				<td>15</td>
+				<td>16</td>
+				
+			</tr>
+	
+		</tbody>
+	</table>
+	
+
+</body>
+</html>
