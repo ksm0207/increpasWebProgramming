@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+	<style>
+		
+		table{
+			width:500px;
+			border: 3px solid #000;
+			text-align: center;
+		
+		}
+		/* table에 ID값을 부여하였음 해당 아이디를 가지는 요소만 적용된다.*/
+		/* id를 부여받지 않은 요소는 '전체를 의미함'*/
+		table#t1{
+			border-spacing: 0px
+		}
+		
+		/* table 안에있는 모든 td 요소를 바꾸기 */
+		/* 자바의 상속관계를 생각해보면 table은 부모이고 td는 자식이라고 볼때
+		   table안에 있는 모든 td들에게 적용하는 자손선택자를 하였음
+		      만약 table 안에 tbody 안에  td 요소만 바꾼다면
+		      table(부모) tbody(자식) td(자손) 요소를 바꿈
+		*/
+		table#t1 td {
+			border: 1px  solid #000;
+		}
+		
+		
+		table#t2{
+			border-collapse: collapse;
+		}
+		/* > 는 자식 선택자를 의미함 table#t2 th 도 가능함. */
+		table#t2>thead th{
+			background-color:#bcbcbc;
+		}
+		
+		
+		table#t1>tfoot td {
+			text-align: center;
+		}
+		
+		
+	
+		
+	</style>
+</head>
+<body>
+	
+	<div>
+		<header>
+			<h1>선택자(CSS 연습)</h1>
+		</header>
+		<div>
+			<table id="t1">
+				<caption>CSS 연습!</caption>
+				<colgroup>
+					<col width="40px"/>
+					<col width="80px"/>
+					<col width="140px"/>
+					<col width="*"/>
+				</colgroup>
+				
+				<tfoot>
+					<tr>
+						<td colspan="4">자료제공: ㈜ 인크레파스</td>					
+					</tr>
+				</tfoot>
+				
+				<thead>
+				
+					<tr>
+						<th>순위</th>
+						<th>언어</th>
+						<th>라이센스</th>
+						<th>URL</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>자바</td>
+						<td>MIT</td>
+						<td>http://www.oracle.com</td>
+					</tr>
+					
+					<tr>
+						<td>2</td>
+						<td>XML</td>
+						<td>null</td>
+						<td>http://www.w3.org</td>
+					</tr>
+				</tbody>
+				
+				
+			</table>
+			
+			<table id="t2">
+				<caption>CSS 연습!</caption>
+				<colgroup>
+					<col width="40px"/>
+					<col width="80px"/>
+					<col width="140px"/>
+					<col width="*"/>
+				</colgroup>
+				
+				<tfoot>
+					<tr>
+						<td colspan="4">자료제공: ㈜ 인크레파스</td>					
+					</tr>
+				</tfoot>
+				
+				<thead>
+				
+					<tr>
+						<th>순위</th>
+						<th>언어</th>
+						<th>라이센스</th>
+						<th>URL</th>
+					</tr>
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>자바</td>
+						<td>MIT</td>
+						<td>http://www.oracle.com</td>
+					</tr>
+					
+					<tr>
+						<td>2</td>
+						<td>XML</td>
+						<td>null</td>
+						<td>http://www.w3.org</td>
+					</tr>
+				</tbody>
+				
+				
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>

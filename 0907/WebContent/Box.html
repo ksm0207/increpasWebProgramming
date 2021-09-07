@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	div{
+	
+		width:200px;
+		height: 200px;
+		border: 1px solid;
+		/* margin-bottom : 아래 간격을 주고싶을때 */
+		margin-bottom: 10px;
+	}
+	div#box2{
+		
+		border: 5px solid;
+		/* padding : 안쪽 여백 주기 (동서남북 방향에 px 만큼 주어지게 된다.)*/
+		padding: 50px;
+	}
+	/* 클래스 선택자 : Class 가 box인 요소에 적용하기.*/
+	.box {
+		background-image: url("images/naver.png");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+	
+</style>
+</head>
+<body>
+
+	<h1>Box 개념 알아보기</h1>
+	<img src="images/naver.png">
+	
+	<!-- Class 가 box인 애들은 공통으로 사용하고 있다. -->
+	<div class="box" id="box1">Box1</div>
+	<div id="box2"></div>
+	<div class ="box" id="box3">Box3</div>
+	
+	
+</body>
+</html>
