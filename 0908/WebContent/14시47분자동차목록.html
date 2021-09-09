@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	body{
+		margin:0;
+		padding:0;
+		background-color: #232323;
+		color: #fff;
+	}
+	
+	#wrap a{
+		color: #fff;
+	}
+	#wrap img{
+		border: 0;
+	}
+	
+	#wrap {
+		border: 1px solid #fff;
+		width: 700px;
+		/* margin : 여백 : px만큼 공간을 떨어뜨리기  */
+		/* margin: 50px 100px; 50px : 위/아래 여백 , 100px : 좌/우 여백 */
+		margin: 50px auto; /* auto : 좌/우 여백을 자동으로 맞춰주기*/
+		
+		/* 화면 밑단에 여백을 주기 싫을때 margin-bottom 으로 맞춰주기 */
+		margin-bottom: 0px;
+		
+	}
+	#wrap>h1{
+		margin: 10px;
+		font: bold 35px sans-serif;
+		text-align: center;
+	}
+	ul#carList{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.carBox{
+		width: 170px;
+		border: 1px solid #fff;
+		text-align: center;
+		/* 현 이미지와 텍스트 끼리 붙어있기 떄문에 padding(안쪽여백) 을 준다 */
+		padding-bottom: 10px;
+		/* 시계방향 만큼 margin 넣어주기 */
+		margin: 0 0 46px 46px;
+		/*카드를 붙여주기 (레이아웃을 먼저 잡고 후반에 작업하기.) 
+			class : end와 이어지니깐 참고할것
+		*/
+		float: left;
+	}
+	.carBox>span>a{
+		font: 12px sans-serif;
+		text-decoration: none;
+	}
+	.carBox>a{
+		display: block;
+		border: 5px solid #232323;
+		width: 160px;
+		height: 120px;
+	}
+	.carBox>a:hover {
+		border: 5px solid #f00;
+	}
+	
+	.end{
+		clear: both; /* 적용되었던 float을 해제시키기 */
+	}
+	
+	
+	
+}
+	
+	
+	
+
+</style>
+</head>
+<body>
+
+	<div id="wrap">
+		<h1>자동차 목록</h1>
+		
+		<ul id="carList">
+		
+			<li class="carBox">
+				<a href="#"><img src="images/audi-r8.jpg"></a>
+				<span><a href="#">Audi-R8</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/Aston_Martin-One-77.jpg"></a>
+				<span><a href="#">Aston Martin One 77</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/Jaguar-XJ.jpg"></a>
+				<span><a href="#">Jaguar XJ</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/BMW-Z4.jpg"></a>
+				<span><a href="#">BMW Z4</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/Bentley-Continental_GTC.jpg"></a>
+				<span><a href="#">Bentley Continental GTC</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/Hyundai-Genesis.jpg"></a>
+				<span><a href="#">Hyundai Genesis</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/Lamborghini-Reventon.jpg"></a>
+				<span><a href="#">Lamborghini Reventon</a></span>
+			</li>
+			
+			<li class="carBox">
+				<a href="#"><img src="images/ferrari-458_Italia.jpg"></a>
+				<span><a href="#">ferrari 458_Italia</a></span>
+			</li>
+			
+				<li class="carBox">
+				<a href="#"><img src="images/ferrari-458_Italia.jpg"></a>
+				<span><a href="#">ferrari 458_Italia</a></span>
+			</li>
+			
+			<li class="end"></li>
+		</ul>
+		
+	</div>
+	
+
+</body>
+</html>

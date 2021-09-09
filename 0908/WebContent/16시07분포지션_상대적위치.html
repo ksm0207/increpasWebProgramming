@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+	
+	#wrap{
+		border: 2px solid red;
+		width: 600px;
+		margin: 30px auto;
+		padding: 10px;
+		text-align: center;
+		color: white;
+	}
+	
+	#wrap>div{
+		border: 1px solid black;
+		width: 100px;
+		height: 100px;
+		margin-bottom: 20px;
+		position: relative; /* 포지션 : relative -> 상대적 위치를 지정하게 된다 */
+	}
+	
+	#wrap>#d1{
+		/* 상대적 위치 : #wrap */
+		background: #f00;
+		top: 20px;
+		left: 20px;
+	}
+	
+	#wrap>#d2{
+		/* 상대적 위치 : #d1 */
+		background: #0f0;
+		top: 20px;
+		left: 20px;
+	}
+
+	#wrap>#d3{
+		/* 상대적 위치 : #d2 */
+		background: blue;
+		top: 20px;
+		left: 20px;
+	}
+	
+	
+	
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<div id="d1">Box1</div>
+		<div id="d2">Box2</div>
+		<div id="d3">Box3</div>
+	</div>
+
+</body>
+</html>
