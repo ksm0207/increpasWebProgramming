@@ -7,6 +7,26 @@
 }
 
 /* Header 상단영역 */
+
+/* 이미지 로고 */
+.logo{
+	width:480px;
+	height:59px;
+	background: url(../images/logo.png) no-repeat;
+	position: relative;
+	top: 25px;
+}
+/* 이미지 로고 정보 (?) */
+.logo_info{
+	display:inline-block;
+	width:297px;
+	background: url(../images/logo_info.gif) no-repeat;
+	position: absolute;
+	right :5px;
+	top: 25px;
+	text-indent: -3000px
+}
+
 #header{
 	width: 980px;
 	height: 150px;
@@ -61,3 +81,7 @@ span.m05{
 	background-position: 0 -88px;
 }
 
+#header .gnb li:hover{
+	background-color: #e24c09;
+}
+/*=================== 상단메뉴 끝 =================== */
