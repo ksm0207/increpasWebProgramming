@@ -23,7 +23,6 @@
 	background: url(../img/logo.png) no-repeat;
 	text-indent: -9999px;
 }
-
 /****** 메뉴작업 *******/
 #header .gnb{ /* ul을 header의 아래쪽에 붙여 놓는다. */
 	position: absolute;
