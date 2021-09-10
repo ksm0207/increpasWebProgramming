@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	#before{
+		width: 980px;
+		height:280px;
+		margin: auto;
+		margin-top: 30px;
+	}
+	#before .normal_s{
+		font-size: 30px;
+		font-weight: bold;
+		
+	}
+	#before .before_line{
+		width: auto;
+		border-bottom: 3px solid gray;
+		height: 30px;
+	}
+	#before .before_line .text_left{
+		float: left;
+	}
+		#before .before_line .text_right{
+		float: right;
+	}
+	
+	.sign_up{
+		width:auto;
+		height:800px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.sign_up01{
+		border-bottom: 1px solid #CCCCCC;
+		border-top: 1px solid #CCCCCC;
+		margin-bottom: 0px;
+		
+	}
+	.sign_up01 .test{
+		color: black;
+		width: 100px;
+		height: 45px;
+		background-color: #EEEEEE;
+		text-align: center;
+		line-height: 50px;
+		font-weight: bold;
+		border-right: 1px solid #CCCCCC;
+		position: relative;
+	}
+	.sign_up01 .name{
+		position: absolute;
+		width: 980px;
+		left: 150px;
+		text-align: left;
+		
+	}
+	
+	.user_id{
+		width: 957px;
+		height: 48px;
+		border-bottom: 1px solid #CCCCCC;
+		
+	}
+	.user_id .u_id{
+		display:inline-block;
+		color:black;
+		background-color:#EEEEEE;
+		width: 100px;
+		height:46px;
+		font-weight: bold;
+		font-size:18px;
+		border-bottom: 1px solid #CCCCCC;
+		border-top: 1px solid #CCCCCC;
+		border-right: 1px solid #CCCCCC;
+		margin-bottom: 0px;
+		text-align: center;
+		line-height: 50px;
+	}
+	
+
+</style>
+</head>
+
+<body>
+	<div id="before">
+		<span class="normal_s">일반 개인회원가입</span>
+		<p style="font-weight: bold">사회공헌 포탈 서비스인 T-together는 누구나 참여할 수 있으며 가입하시면 GiveU(기부)나 자원봉사
+		   참여 등 다양한 서비스 이용이 가능합니다. 이용프로그램에 따라 필요한 추가정보를 요청할 수 있습니다.</p>
+		  <div class="before_line">
+		  		<span class="text_left">기존회원정보를 입력해주세요.</span>
+		  		<span class="text_right">표시 필수입력시항</span>
+		  </div>
+		  
+		  <div class="sign_up">
+		  	<form>
+			  	<div class="sign_up01">
+						<div class="test">
+							<label class="name">김성민</label>
+							<label for="name">이름</label>
+						</div>
+				</div>
+					
+				<div class="sign_up01">
+					
+						<div class="user_id">
+							<span class ="u_id" style="font-size: 14px;">아이디</span>
+							<span style="font-size: 12px;
+								   position: absolute; color: gray">6~12자리의 영문 숫자(혼용 가능)을 입력해주세요</span>
+							<input class="input_01" type="text" name="name">
+							<button type="submit">중복확인</button>
+						</div>
+						
+						<div class="user_id">
+							<span class ="u_id" style="font-size: 14px;">비밀번호</span>
+							<span style="font-size: 12px;
+								   position: absolute; color: gray">안전을 위해 10개 이상의 문자조합(영문 대소문자 + 숫자 또는 기호)를 입력해주세요</span>
+							<input class="input_01" type="text" name="name">
+							
+						</div>
+						
+						<div class="user_id">
+							<span class ="u_id" style="font-size: 14px;">비밀번호 확인</span>
+							<span style="font-size: 12px;
+								   position: absolute; color: gray">입력하신 비밀번호 확인을 위해 다시 한번 입력해주세요.</span>
+							<input class="input_01" type="text" name="name">
+						</div>
+						
+						<div class="user_id">
+							<span class ="u_id" style="font-size: 14px;">닉네임</span>
+							<span style="font-size: 12px;
+								   position: absolute; color: gray">닉네임은 한글 1~6자, 영문 대소문자 2~12자, 숫자 사용이 가능하며 욕설이나 비속어는 닉네임으로 사용 불가합니다.</span>
+							<input class="input_01" type="text" name="name">
+						</div>
+						
+						<!-- 주소  -->
+						<div class="user_id add">
+							<span class ="u_id" style="font-size: 14px;">주소</span>
+							
+							<input class="input_01" type="button" value="우편 번호 찾기">
+							<span></span>
+						</div>
+						
+						<!-- 생년 월일  -->
+						
+						<!--  성별  -->
+						
+						<!-- 휴대 전화 번호 -->
+						
+						<!-- 이메일 -->
+			
+				</div>
+					
+		  	</form> <!-- form 끝 -->
+		
+			</div>
+			<div>
+				버튼만들기
+			</div>
+	</div>
+	
+	
+	
+	
+
+</body>
+</html>
