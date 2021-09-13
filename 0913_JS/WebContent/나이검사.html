@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	
+	function test() {
+		
+		let s_age = document.getElementById('s_age');
+		let age = s_age.value;
+		
+		if(age >= 20 && age < 30){
+			alert("20대 입니다");
+			console.log(typeof age); 
+			return true;
+			
+		}else if (age >= 30 && age < 40) {
+			alert("30대 입니다");
+			return true;
+		}
+		if(isNaN(age) || age.length > 0){
+			alert("입력란에 문자 및 공백이 포함되었습니다.");
+			return false;
+		}
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+</script>
+</head>
+<body>
+
+	<form action="test.jsp">
+		<label for="s_age">나이</label>
+		<input type="text"  id="s_age" name="age"><br>
+		<button type="button" onclick="test()">검사</button>	
+	</form>
+
+</body>
+</html>

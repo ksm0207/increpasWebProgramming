@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	let a = 100;
+	function test1() {
+		
+		// id가 txt 인 요소를 현재문서에서 찾음.
+		let txt = document.getElementById('txt');
+		
+		// 요소를 찾은 후 변수 a에 값을 할당함.	
+		txt.value = a;
+	}
+	
+	function test2() {
+		
+		let txt = document.getElementById('area');
+		
+		txt.value = a++;
+	}
+	
+
+
+</script>
+
+</head>
+<body>
+
+	<input type="text" id="txt"><br>
+	
+	<input type="button" value="버튼" onclick="test1()" ><br>
+	
+	<button type="button" onclick="test2()">버튼2</button><br>
+	
+	<textarea id="area" rows="6" cols="50"></textarea>
+	
+	
+	
+	
+</body>
+</html>

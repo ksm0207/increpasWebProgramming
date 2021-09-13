@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+	
+	function test() {
+		let id = document.getElementById('s_id').value;
+		
+		if(id == "" || id.trim().length > 0){
+			alert("아이디를 입력하세요.");
+			// 공백을 넣었을때 값을 초기화 시키자.
+			id.value ="";
+		}else{
+			alert(id);
+		}
+	}
+	
+	
+</script>
+
+</head>
+<body>
+
+	<form action="test.jsp">
+		<label for="s_id">아이디</label>
+		<input type="text" id="s_id" name="id"><br>
+		<button type="button" onclick="test()">로그인</button>	
+	</form>
+	
+
+</body>
+</html>
