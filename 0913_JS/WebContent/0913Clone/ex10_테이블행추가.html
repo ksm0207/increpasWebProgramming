@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		#table{
+			width: 300px;
+			border-collapse: collapse;
+		}
+		#table th, #table td{
+			border: 1px solid #dedede;
+			padding: 4px;
+		}
+		#table caption{
+			text-indent: -9999px;
+			height: 0;
+		}
+		#table thead>tr:first-child td{
+			border: none;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<h2>테이블 행추가</h2>
+	<table id="table">
+		<caption>행추가 테이블</caption>
+		<thead>
+			<tr>
+				<td colspan="3">
+					<button type="button" onclick="exe()">추가</button>
+				</td>
+			</tr>
+			<tr>
+				<th>번호</th>
+				<th>이름</th>
+				<th>연락처</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	
+	<script>
+		var idx = 0;
+		function exe(){
+			
+			//우선 td요소를 3개 만든다.
+			var td1 = document.createElement("td");
+			var td2 = document.createElement("td");
+			var td3 = document.createElement("td");
+			
+			//각 td안에는 내용이 들어간다. 예를 들면 <td>마루치</td>
+			td1.innerText = ++idx; // <td>1</td>
+			td2.innerText = "마루치";
+			td3.innerText = "010-1234-5678";
+			
+			//tr요소를 만들자
+			var tr = document.createElement("tr");
+			
+			//tr에 문자값들을 가운데 정렬시키는 style 적용
+			tr.style.textAlign = "center";
+			
+			tr.appendChild(td1);
+			tr.appendChild(td2);
+			tr.appendChild(td3);
+			
+			var table = document.getElementById("table");
+			
+			var tbody = table.children[2];//table의 자식요소들 중 3번째 자식
+			
+			//tbody에 생성된 tr을 추가한다.
+			tbody.appendChild(tr);
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+

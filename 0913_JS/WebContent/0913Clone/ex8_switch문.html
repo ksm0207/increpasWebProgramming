@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		#box{
+			width: 300px;
+			height: 150px;
+			border: 1px solid #00f;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<label for="m_car">차종:</label>
+		<select id="m_car" name="car" onchange="exe(this.selectedIndex)">
+			<option>::선택하세요::</option>
+			<option value="a">아우디R8</option>
+			<option value="b">벤틀리</option>
+			<option value="p">포르쉐</option>
+		</select>
+	</form>
+	
+	<div id="box"></div>
+	
+	<script>
+		
+		var exe = function(n){  //function exe(n){
+			//n은 select태그에서 선택된 인덱스 값이다.
+			var msg = "";
+			switch(n){
+				case 1:
+					msg = "아름다운 여신과 같은 아이";
+					break; //switch문 탈출
+				case 2:
+					msg = "<strong>우아하고 멋진 아이</strong>";
+					break;
+				case 3:
+					msg = "뭔가 화가 잔득 나 있는 아이";
+					break;
+			}
+			
+			//현재문서에서 아이디가 box인 요소를 검색한다.
+			var box = document.getElementById("box");
+			
+			//검색된 box안에 HTML형식으로 msg를 넣는다.
+			box.innerHTML = msg;
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+

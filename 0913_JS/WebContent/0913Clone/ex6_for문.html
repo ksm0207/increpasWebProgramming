@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		#box{
+			width: 300px;
+			height: 200px;
+			border: 1px solid #00f;
+		}
+	</style>
+</head>
+<body>
+	<button type="button" onclick="ex(2)">2단</button>
+	<button type="button" onclick="ex(3)">3단</button>
+	<button type="button" onclick="ex(4)">4단</button>
+	<button type="button" onclick="ex(5)">5단</button>
+	<br/>
+	<br/>
+	<div id="box"></div>
+	
+	<script>
+		function ex(dan){
+			//console.log(dan);
+			
+			//현재 문서에서 아이디가 box인 요소 검색
+			var box = document.getElementById("box");
+			var res = "";
+			for(var i=1; i<10; i++){
+				res += dan + "*" + i + "=" + (dan*i) +"<br/>";
+			}//for의 끝
+			
+			//반복문을 수행하면서 각 수행시 결과를 문자열로 만든 후
+			// res라는 변수에 누적시켰다.
+			box.innerHTML = res;
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="test.jsp">
+		<label for="s_age">나이</label>
+		<input type="text" id="s_age" name="age"/>
+		<br/>
+		
+		<button type="button" onclick="test()">확인</button>
+	</form>
+	<script>
+		function test(){
+			var s_age = document.getElementById("s_age");
+			
+			//입력된 값 가져오기 - HTML에서 값(value)을 가져오면
+			//						일단 문자열로 인식한다.
+			var age = s_age.value;
+			
+			if(age != "" && age.trim().length > 0){//입력된 경우!!
+				// 나이가 20인지? 30대인지?를 구별하자!
+						
+				//나이가 저장된 age는 문자열이므로 정수로 변경해야 한다.
+				var i_age = parseInt(age);
+			
+				if(i_age>=20 && i_age<30)
+					alert("20대");
+				else if(i_age>=30 && i_age<40)
+					alert("30대");
+			}
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+

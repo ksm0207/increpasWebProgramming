@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="" name="frm1">
+		<label for="s_id">아이디</label>
+		<input type="text" id="s_id" name="u_id"/><br/>
+		
+		<label for="s_pw">비밀번호</label>
+		<input type="text" id="s_pw" name="u_pw"/><br/>
+		
+		<label for="s_pw2">비밀번호 재입력</label>
+		<input type="text" id="s_pw2" name="u_pw2"/><br/>
+		
+		<button type="button" onclick="exe()">확인</button>
+	</form>
+	
+	<script>
+		function exe(){
+			// 현재 문서에서 첫번째 폼을 접근하자!
+			var f1 = document.forms[0];
+			alert(f1.name);
+			
+			//검색된 폼 내부의 요소들을 검색하자!
+			var sub = f1.elements;//************
+			alert(sub.length);
+			
+			// f1의 요소들 모두를 반복하는 반복문
+			for(var i=0; i<sub.length-1; i++){
+				
+				if(sub[i].value.trim().length == 0){
+					alert(sub[i].name+"의 값이 없습니다.");
+					sub[i].focus(); // 커서 가져다 놓기
+					return;
+				}
+			}
+			
+			alert("서버 전달!");
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+

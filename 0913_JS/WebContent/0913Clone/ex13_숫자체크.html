@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		#box{
+			width: 300px;
+			height: 200px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<label for="b_year">태어난 년도</label>
+		<input type="text" id="b_year" name="bYear"/>
+		<input type="button" value="확인" onclick="exe(this.form)"/>
+		<!-- this는 input태그의 button객체를 의미하고,
+			this.form은 button객체를 포함하고 있는 폼객체를 의미한다. 즉,
+			exe함수를 호출할 때 현재 폼 전체를 인자로 전달한다. -->
+	</form>
+	<br/>
+	<div id="box"></div>
+	
+	<script>
+		function exe(frm){
+			var b_year = frm.bYear.value;
+			//alert(b_year);
+			
+			//사용자가 입력한 생년 정보가 모두 숫자로 되어 있는지?
+					//판단하는 함수를 호출하자! 해당 함수가 반환하는 것이
+					// true아니면 false이므로 if문에 바로 써도 된다.
+			if(checkNumber(b_year)){
+				// 숫자인 경우
+				
+				//나이를 구하기 위해 현재 날짜의 년도가 필요하다.
+				var now = new Date();//현재 날짜~!
+				
+				//현재날짜에서 년도만 검출하자!
+				var c_year = now.getFullYear();
+				//alert(c_year);
+				
+				//나이 구하기
+				var age = c_year - b_year;
+				
+				if(age < 19)
+					document.getElementById("box").innerText = "미성년자";
+				else
+					document.getElementById("box").innerText = age
+					+"세이므로 어른이시네요";
+				
+			}else{
+				alert("문자 또는 공백이 \r\n포함되어서는 안됩니다.");
+			}
+		}
+		
+		function checkNumber(str){
+			//먼저 반환값 선언
+			var value = true;
+			
+			//받은 인자값에서 한자씩 추출하여 숫자인지? 아닌지?를 
+					//판단하는 반복문
+			for(var i=0; i<str.length; i++){
+				//str에서 i번째의 문자값을 하나 가져온다.
+				//var ch = str.charAt(i);
+				
+				// str에서 i번째의 문자를 코드값으로 받는다.
+				var code = str.charCodeAt(i);
+				
+				// 숫자 0의 코드값이 48이다. 그럼 9의 코드값은 57이므로
+				// 이 48~57 범위 안에 있는 코드값이 숫자다.
+				if(code < 48 || code > 57){
+					//숫자가 아닌 경우
+					value = false;
+					break;//반복문 탈출!
+				}
+			}//for의 끝!
+			
+			return value;
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
