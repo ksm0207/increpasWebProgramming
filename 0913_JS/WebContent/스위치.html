@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>스위치를 활용한 JS</title>
+</head>
+<body>
+	<form action="">
+		<label for="m_car">차종 : </label> 
+							            <!--this.selectedIndex : option value = index -->
+							            <!-- parameter : getCar() --> 
+		<select id="m_car" onchange="getCar(this.selectedIndex)">
+			<option>::선택하세요::</option>
+			<option value="a">아우디R8</option>
+			<option value="b">벤틀리</option>
+			<option value="p">포르쉐</option>
+		</select>
+		
+	</form>
+	
+	<div style="width: 300px; height: 150px; border: 1px solid #00f;"
+	     id="box">
+	
+	</div>
+	
+	<script type="text/javascript">
+		// ↓둘다 같은것이고 , 변수로 사용할 수 있음  
+		// let getCar = function(car) 
+		function getCar(car) {
+			let res = "";
+			switch (car) {
+			case 1:
+				res="value = a "
+				break;
+			case 2:		
+				res="value = b "
+				break;
+			case 3:			
+				res="value = c "
+				break;
+			}
+			
+			let box = document.getElementById('box');
+			
+			// 검색된 box안에 HTML형식으로 res를 넣는방법
+			box.innerHTML = res;
+		}
+	
+	</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="">
+		<label for="b_year">태어난 년도 : </label>
+		<input type="text" id="b_year"><br>
+		<input type="button" value="입력" onclick="exe(this.form)">
+	</form>
+	
+	<script type="text/javascript">
+		
+		function exe(form){
+			
+			let b_year = form.b_year.value;
+			
+			if (checkNumber(b_year)) {
+				console.log(b_year);
+				alert(b_year);
+			}else {
+				console.log(false);
+			}
+		}
+	
+		
+		function checkNumber(year){
+			
+			let check = true;
+			
+			for(let i=0; i< year.length; i++) {
+				
+				let code = year.charCodeAt(i);
+				
+				if (code < 48 || code > 57 ) {	
+					check = false;
+					break;
+				}
+			}
+			return check;
+		}
+	
+	</script>
+</body>
+</html>
