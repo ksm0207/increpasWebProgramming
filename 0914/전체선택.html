@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/checkBox.js"></script>
+    
+    <title>Document</title>
+    <style>
+        #table{
+            width: 600px;
+            border-collapse: collapse;
+        }
+        #table th, #table td{
+            border: 1px solid black;
+        }
+        #table thead tr{
+            background-color: #cdcdcd;
+        }
+    </style>
+</head>
+<body>
+    <h1>전체 선택 박스 - JQuery</h1>
+
+    <table id="table">
+        <colgroup>
+            <col width="80px">
+            <col width="*">
+        </colgroup>
+        <thead>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="all">
+                        <em>전체선택</em>
+                    </td>
+                </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ch1" name="ch1">
+                        <td>제목1</td>
+                    </td>
+                    
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ch2" name="ch2">
+                    </td>
+                    <td>제목2</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ch3" name="ch3">
+                    </td>
+                    <td>제목3</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ch4" name="ch4">
+                    </td>
+                    <td>제목4</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ch5" name="ch5">
+                    </td>
+                    <td>제목5</td>
+                </tr>
+        </tbody>
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/jquery9.js"></script>
+
+    <title>Table Insert and Delete - JQuery</title>
+    <style>
+		#table{
+			width: 300px;
+			border-collapse: collapse;
+		}
+		#table th, #table td{
+			border: 1px solid #dedede;
+			padding: 4px;
+		}
+		#table caption{
+			text-indent: -9999px;
+			height: 0;
+		}
+		#table thead>tr:first-child td{
+			border: none;
+			text-align: center;
+		}
+	</style>
+    
+</head>
+<body>
+    <h1>Table Insert and Delete - JQuery Version</h1>
+
+    <form action="">
+
+        <label for="user_name">이름 : </label>
+        <input id="user_name" type="text">
+        <br>
+
+        <label for="user_phone">연락처 : </label>
+        <input id="user_phone" type="text">
+        <br>
+
+    </form>
+
+    <table id="table">
+        <caption>테이블 데이터 추가하기.</caption>
+        <thead>
+
+            <tr>
+				<td colspan="4">
+					<button type="button" id="add_btn">추가</button>
+				</td>
+			</tr>
+
+            <tr>
+                <td>번호</td>
+                <td>이름</td>
+                <td>연락처</td>
+                <td>삭제</td>
+            </tr>
+
+        </thead>
+        <tbody></tbody>
+    </table>
+
+</body>
+</html>
