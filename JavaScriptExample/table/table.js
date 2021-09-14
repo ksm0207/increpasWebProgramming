@@ -31,8 +31,6 @@ function insert(){
     create_delButton.type ="button";
     create_delButton.value="삭제";
     create_delButton.onclick = function () {
-        console.log("Heelo!")
-       
         table.deleteRow(this.rowIndex=2);
     }
 
