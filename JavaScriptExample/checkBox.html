@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script defer src="./js/checkbox.js"></script>
+    <title>Document</title>
+    <style>
+        .checkbox_group{
+            
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            border: 3px solid darkgray;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+     <!-- 구현하고자 하는 체크박스 : 하나의 div에 그룹으로 묶어서 사용하면 좋을듯 !-->
+    <!-- 왜? 구현해야할까 ? : 회원가입 절차시 약관 동의가 필요할때 -->
+
+    <!-- 1. 전체 동의 !--> 
+    <!--2. 개인정보 처리방침 동의 -->
+    <!--3. 서비스 이용약관 동의 -->
+    <!--4. 마케팅 수신동의 -->
+    
+    <div class="checkbox_group">
+        
+        <div style="border: 3px solid gray; position: absolute; padding: 50px; left: 50px; margin-top: 50px;">
+            <input type="checkbox" id="check_all">
+            <label for="check_all">전체동의</label><br>
+    
+            <input type="checkbox" class="normal">
+            <label for="check_1">개인정보 처리방침 동의</label><br>
+
+            <input type="checkbox" class="normal">
+            <label for="check_2">서비스 이용약관 동의</label><br>
+
+            <input type="checkbox" class="normal">
+            <label for="check_3">마케팅 수신동의</label>
+        </div>
+    </div>
+
+    
+</body>
+</html>
