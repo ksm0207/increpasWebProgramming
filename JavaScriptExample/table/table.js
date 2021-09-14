@@ -22,6 +22,11 @@ function insert(){
 
     console.log(`Name= ${td_name.innerHTML = user_name.value}`);
 
+    tr.appendChild(td_index);
+    tr.appendChild(td_name);
+    tr.appendChild(td_phone);
+    tr.appendChild(td_del);
+
     let create_delButton = document.createElement('input');
     create_delButton.type ="button";
     create_delButton.value="삭제";
@@ -32,13 +37,6 @@ function insert(){
     }
 
     td_del.appendChild(create_delButton);
-   
-    tr.appendChild(td_index);
-    tr.appendChild(td_name);
-    console.log(`tr. appendChild(td_name) = ${tr.appendChild(td_name)}`);
-    tr.appendChild(td_phone);
-    tr.appendChild(td_del);
-
 
    let tbody = table.children[2];
 
