@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		table{
+			border-collapse: collapse;
+			width: 1000px;
+		}
+		table th, table td{
+			border: 1px solid black;
+			padding: 4px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<header>
+			<h1>Group Checkbox연습</h1>
+		</header>
+		<article>
+			<table id="table">
+				<colgroup>
+					<col width="80px"/>
+					<col width="200px"/>
+					<col width="120px"/>
+					<col width="120px"/>
+					<col width="120px"/>
+					<col width="120px"/>
+					<col width="120px"/>
+					<col width="*"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>번호</th>
+						<th>이름</th>
+						<th><input type="checkbox" id="r0"/><span>그룹1</span></th>
+						<th><input type="checkbox" id="r1"/><span>그룹2</span></th>
+						<th><input type="checkbox" id="r2"/><span>그룹3</span></th>
+						<th><input type="checkbox" id="r3"/><span>그룹4</span></th>
+						<th><input type="checkbox" id="r4"/><span>그룹5</span></th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>마루치</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>이도</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>일지매</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>을불</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>창조리</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>아라치</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>이순신</td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td><input type="checkbox" value="1"/></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</article>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			/*
+			$("#r0").click(function(){
+				//각 tr에서 3번째 td들을 선택하자!
+				// 그리고 그 안에 있는 input의 checkbox들만 가져온다.
+				var ar = $("#table tbody td:nth-child(3) input:checkbox");
+				
+				//현재 r0의 상태에 따라 선택여부를 결정
+				//if(this.checked)
+				if($(this).is(":checked"))
+					ar.prop("checked", true);
+				else
+					ar.prop("checked", false);
+			});*/
+			/*
+				위는 아이디가 r0인 체크박스에게만 해당되며 이것을
+				복사하여 r1, r2,...등의 체크박스에 적용하기 위해
+				코드를 복사한 후 index값을 적절하게 수정해가면 된다.
+				하지만 유지보수 차원에서는 좋은 방법이 아니다.
+			*/
+			$("#table thead input:checkbox").click(function(){
+				
+				//클릭한 checkbox의 상위의 th를 얻어서 index값을 알아내자!
+				var n = $(this).parent(); // th
+				
+				// 앞서 구한 th가 몇번째 th인지는 tr에게 물어봐야 한다.
+				var idx = $("#table thead tr th").index(n);
+				console.log(idx);
+			});
+		});
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

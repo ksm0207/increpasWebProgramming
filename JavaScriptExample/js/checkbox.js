@@ -2,8 +2,7 @@ $(function(){
     console.log("ready");
 
     $(".checkbox_group").on("click","#check_all",function(){
-        console.log("on() : ready ! ");
-        
+              
         let checked = $(this).is(":checked");
         console.log(` this : checkbox_group :  ${checked}`);
         /* children() : 선택한 요소의 자식(child) 요소를 모두 선택한다..*/
