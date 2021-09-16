@@ -19,7 +19,7 @@ $(function(){
         let idx = $("#table thead tr th").index(rowIndex);
       
         let is_check = $("table tbody td:nth-child("+ `${idx+1}` +") input:checkbox");
-        
+       
         console.log(` is_check = ${idx}`);
 
         if(this.checked){
