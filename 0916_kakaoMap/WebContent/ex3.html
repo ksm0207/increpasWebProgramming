@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+	#table{
+		border-collapse: collapse;
+		width: 300px;
+	}
+	
+	#table th{
+		border: 2px solid black;
+		background-color: #efefef;
+		padding: 4px;
+	}
+	#table td{
+		border: 1px solid black;
+	}
+</style>
+<script type="text/javascript">
+
+	$(function () {
+		console.log("ready");
+		$("#btn").on("click",function(){
+			let txt = $("#txt").val();
+			let parameter = 'v1='+encodeURIComponent(txt);
+			
+			$.ajax({
+				url :"Ex2.jsp",
+				data: parameter,  // HTTP 요청과 함께 서버로 보낼 데이터
+			}).done(function (data) {
+				$("#box").text(data);
+			});
+		});
+	})
+
+	$(function() {
+		
+	});
+</script>
+</head>
+<body>
+	<table id="table">
+	
+		<colgroup>
+			<col width="80px">
+			<col width="80px">
+			<col width="*">
+		</colgroup>
+		<thead>
+			<tr>
+			<th colspan="3">
+				<input type="button" value="호출" id="btn"><br><th>
+			</tr>
+			
+			<tr>
+				<th>컬럼1</th>
+				<th>컬럼2</th>
+				<th>컬럼3</th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr>
+				
+			</tr>
+		</tbody>
+	</table>
+	
+	
+	
+	<div id="box">
+		1000원
+	</div>
+	
+</body>
+</html>

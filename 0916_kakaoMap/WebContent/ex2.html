@@ -9,9 +9,13 @@
 
 	$(function () {
 		console.log("ready");
-		$("#btn").bind("click",function(){
+		$("#btn").on("click",function(){
+			let txt = $("#txt").val();
+			let parameter = 'v1='+encodeURIComponent(txt);
+			
 			$.ajax({
-				url :"ex.jsp"
+				url :"Ex2.jsp",
+				data: parameter,  // HTTP 요청과 함께 서버로 보낼 데이터
 			}).done(function (data) {
 				$("#box").text(data);
 			});
@@ -24,6 +28,7 @@
 </script>
 </head>
 <body>
+	입력:<input type="text" id="txt">
 	<input type="button" value="호출" id="btn"><br>
 	<div id="box">
 		1000원
