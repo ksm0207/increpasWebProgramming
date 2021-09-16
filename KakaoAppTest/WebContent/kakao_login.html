@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+
+</head>
+<body>
+<ul>
+
+	<li>
+      <a id="custom-login-btn" href="javascript:loginWithKakao()">
+  <img
+    src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
+    width="222"
+  />
+</a>
+	</li>
+	
+	<li onclick="kakaoLogout();">
+      <a href="javascript:void(0)">
+          <span>카카오 로그아웃</span>
+      </a>
+	</li>
+</ul>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
+<script type="text/javascript">
+const app_key = "b80fbf97e14fe89a7b782a0e63d70562";
+Kakao.init(app_key);
+console.log(Kakao.isInitialized());
+
+function loginWithKakao() {
+    Kakao.Auth.login({
+      success: function(authObj) {
+        alert(JSON.stringify(authObj))
+        location.href="main.html";
+        console.log("성공");
+      },
+      fail: function(err) {
+        alert(JSON.stringify(err))
+        console.log("실패");
+      },
+    })
+  }
+  
+function kakaoLogout() {
+    if (Kakao.Auth.getAccessToken()) {
+      Kakao.API.request({
+        url: '/v1/user/unlink',
+        success: function (response) {
+        	console.log(response)
+        },
+        fail: function (error) {
+          console.log(error)
+        },
+      })
+      Kakao.Auth.setAccessToken(undefined)
+    }
+  }  
+</script>
+
+</body>
+</html>

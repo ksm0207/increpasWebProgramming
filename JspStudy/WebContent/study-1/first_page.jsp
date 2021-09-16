@@ -14,4 +14,4 @@
 <p> 아래는 현재 시간을 나타내는 자바 코드를 넣었습니다. </p>
 <p><%= java.util.Calendar.getInstance().getTime() %></p>
 </body>
-</html>
+</html>pt
